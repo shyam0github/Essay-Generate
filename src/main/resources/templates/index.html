@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Essay Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        input[type="text"] {
+            width: 500px;
+            padding: 20px;
+            font-size: 22px;
+            border: none;
+            border-radius: 10px;
+            background-color: #007BFF; /* Blue background */
+            color: white;
+        }
+
+        input[type="submit"] {
+            padding: 18px 40px;
+            font-size: 22px;
+            border: none;
+            border-radius: 10px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="text"]::placeholder {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+<h1>Essay Generator</h1>
+<form action="/generate" method="post">
+    <input type="text" name="prompt" placeholder="Enter your essay prompt here" required>
+    <input type="submit" value="Generate Essay">
+</form>
+</body>
+</html>
